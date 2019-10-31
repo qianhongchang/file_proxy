@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>extension</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            text-align: center;
+            width: 520px;
+            min-height: 250px;
+            background: url('./bg.png');
+            background-size: 3%;
+            overflow: visible;
+            
+        }
+        body::-webkit-scrollbar{
+            width:0px;
+        }
+        .ipt-wrap{
+            width: 251px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            margin-left: 5px;
+            background: #39abf3;
+            font-size: 14px;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+        }
+        input{
+            width: 80%;  
+        }
+        input[type='checkbox']{
+            position: absolute;
+            right: 6px;
+            top: 14px;
+            width: 20px;
+            height: 20px;
+            font-size: 24px;
+        }
+        span{
+            display: inline-block;
+            margin: 54px 10px;
+            height: 70px;
+            width: 70px;
+            text-align: center;
+            line-height: 70px;
+            border-radius: 50%;
+            text-decoration-line: none;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s all ease;
+        }
+        span:hover{
+            transform: scale(1.1,1.1);
+            box-shadow: #333 2px 4px 10px;
+        }
+        #run{
+            background: #40a9ff
+        }
+        #clear{
+            background: rgb(0, 177, 54)
+        }
+        #add_group{
+            background: rgb(51, 60, 42);
+        }
+        .add_item{
+            display: inline-block;
+            margin: 10px 10px;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+            text-decoration-line: none;
+            color: #fff;
+            cursor: pointer;
+            background: url(./add_item.png) center center no-repeat;
+            background-size: 122%;
+        }
+        .del_item{
+            display: inline-block;
+            margin: 10px 10px;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+            text-decoration-line: none;
+            color: #fff;
+            cursor: pointer;
+            background: url(./del_item.png) center center no-repeat;
+            background-size: 100%;
+        }
+        .group-wrap{
+            margin-top: 10px;
+            width: 340px;
+            color: #333;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .group-wrap h5{
+            height: 25px;
+            line-height:25px;
+            background: url('./mulu.png') 2px center no-repeat;
+            background-size: 10% 60%;
+            background-color: #090723;
+            color: #fff;
+            cursor: pointer;
+        }
+        .group-wrap ul{
+            margin: 0 auto;
+            background: #e0e0e0;
+            overflow: hidden;
+        }
+        .group-wrap ul li{
+            padding-left: 36px;
+            background: url('./exchange.png') 2px center no-repeat;
+            background-size: 10% 60%;
+            margin: 10px 0;
+            position: relative;
+        }
+        h3{
+            line-height: 30px;
+            font-size: 14px;
+            color: #333;
+            text-align: left;
+            padding-left: 35px;
+        }
+        .data-ul-wrap{
+            background: #e0e0e0;
+        }
+        .none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h3>代理列表:</h3>
+    <div class="wrap"></div>
+    <span id="run">RUN</span>
+    <span id="clear">CLEAR</span>
+    <span id="add_group">ADD</span>
+    <p id="currentProxy"></p>
+    <script src="./switch.js"></script>
+</body>
+</html>
